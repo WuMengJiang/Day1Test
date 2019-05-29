@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:drawableLeft="@mipmap/location2"
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+   <SearchView
+       android:layout_above="@id/bann"
+       android:layout_toRightOf="@id/tv"
+       android:layout_width="match_parent"
+       android:layout_height="40dp">
+   </SearchView>
+    <com.youth.banner.Banner
+        android:id="@+id/bann"
+        android:layout_below="@id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+    </com.youth.banner.Banner>
+       <GridView
+           android:layout_below="@id/bann"
+           android:id="@+id/gl"
+           android:numColumns="4"
+           android:columnWidth="60dp"
+           android:layout_width="match_parent"
+           android:layout_height="159dp"></GridView>
+    <RelativeLayout
+        android:id="@+id/l3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gl">
+
+        <TextView
+            android:id="@+id/tv_r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="每日发现" />
+
+        <TextView
+            android:layout_toLeftOf="@id/iv_r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多" />
+        <ImageView
+            android:src="@mipmap/right"
+            android:layout_alignParentRight="true"
+            android:id="@+id/iv_r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <HorizontalScrollView
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_below="@id/l3"
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </HorizontalScrollView>
+    </RelativeLayout>
+
+</ScrollView>
